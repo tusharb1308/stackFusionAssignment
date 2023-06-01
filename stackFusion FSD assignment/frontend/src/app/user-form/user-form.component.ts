@@ -17,7 +17,7 @@ export class UserFormComponent {
   constructor(private http: HttpClient) {}
 
   submitForm() {
-    this.http.post('/submit-form', this.user).subscribe(
+    this.http.post('http://localhost:3000/submit-form', this.user).subscribe(
       () => {
         alert('Form submitted successfully.');
         this.user = {

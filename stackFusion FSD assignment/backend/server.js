@@ -5,11 +5,8 @@ const nodemailer = require('nodemailer');
 const app = express();
 const port = 3000;
 
-// app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
-// Serve the Angular frontend
-// app.use(express.static('frontend/dist/frontend'));
+app.use(cors());
 
 // Handle form submission
 app.post('/submit-form', (req, res) => {
@@ -59,7 +56,7 @@ app.post('/submit-form', (req, res) => {
     secure: false, // Set to true if using a secure connection (e.g., SMTP over SSL/TLS)
     auth: {
       user: 'bansaltushar1213@gmail.com', // Replace with your email address
-      pass: 'Tushar@9914550644' // Replace with your email password
+      pass: '' // Replace with your email password
     }
   });
 
